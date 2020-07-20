@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CrudServiceService {
   url='https://crud-4c215.firebaseio.com/products.json';
-  url1=' http://13.232.218.17/api/user/customer';
+  
 
   constructor(private http:HttpClient) { }
 
@@ -16,8 +16,5 @@ export class CrudServiceService {
   fetchProducts(){
     return this.http.get(this.url)
   }
-  getCustomers() {
-    return this.http.get(this.url1);
-  }
-
+ 
   }
