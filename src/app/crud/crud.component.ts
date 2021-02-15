@@ -80,6 +80,7 @@ export class CrudComponent implements OnInit {
   }
   ngOnInit() {
 
+    this.onFetchProduct();
   }
 
 }
