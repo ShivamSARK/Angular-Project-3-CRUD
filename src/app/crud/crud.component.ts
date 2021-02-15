@@ -18,7 +18,7 @@ export class CrudComponent implements OnInit {
   editMode:boolean=false;
   editIndex:number;
   products = [];
-  allcustomers = [];
+  allcustomers = [];  
   onAddProduct(id,name,price){  
     if(this.editMode){
       this.products[this.editIndex] = {
