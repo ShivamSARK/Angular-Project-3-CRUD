@@ -15,7 +15,7 @@ import { CrudServiceService } from './crud-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [CrudServiceService],
   bootstrap: [AppComponent]
