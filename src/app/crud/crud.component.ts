@@ -31,6 +31,7 @@ export class CrudComponent implements OnInit {
       this.id.nativeElement.value='';
       this.name.nativeElement.value='';
       this.price.nativeElement.value='';
+      
     }
     else{
     this.products.push({
@@ -58,9 +59,7 @@ export class CrudComponent implements OnInit {
     this.fetching= true;
     this._crudservice.fetchProducts().subscribe(
       (response)=>{
-         //console.log(response);
          const data = JSON.stringify (response)
-         console.log (data)
          this.products=JSON.parse(data)
          this.fetching= false;
         },
@@ -71,7 +70,6 @@ export class CrudComponent implements OnInit {
   onEditProduct(index:number){
     this.editMode=true;
     this.editIndex=index;
-    console.log(this.products[index])
     this.id.nativeElement.value=this.products[index].id;
     this.name.nativeElement.value=this.products[index].name;
     this.price.nativeElement.value=this.products[index].price;
